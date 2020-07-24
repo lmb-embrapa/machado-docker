@@ -1,0 +1,60 @@
+ATMG00040.1.TAIR10	ATP synthase subunit C family protein
+ATMG00060.1.TAIR10	NADH dehydrogenase subunit 5C
+ATMG00070.1.TAIR10	NADH dehydrogenase subunit 9
+ATMG00080.1.TAIR10	ribosomal protein L16
+ATMG00090.1.TAIR10	structural constituent of ribosome;protein binding
+ATMG00110.1.TAIR10	cytochrome C biogenesis 206
+ATMG00160.1.TAIR10	cytochrome oxidase 2
+ATMG00180.1.TAIR10	cytochrome C biogenesis 452
+ATMG00210.1.TAIR10	ribosomal protein L5
+ATMG00220.1.TAIR10	apocytochrome b
+ATMG00240.1.TAIR10	Gag-Pol-related retrotransposon family protein
+ATMG00270.1.TAIR10	NADH dehydrogenase 6
+ATMG00280.1.TAIR10	Ribulose bisphosphate carboxylase large chain, catalytic domain
+ATMG00285.1.TAIR10	NADH dehydrogenase 2A
+ATMG00290.1.TAIR10	mitochondrial ribosomal protein S4
+ATMG00300.1.TAIR10	Gag-Pol-related retrotransposon family protein
+ATMG00310.1.TAIR10	RNA-directed DNA polymerase (reverse transcriptase)-related family protein
+ATMG00370.1.TAIR10	Ycf1 protein
+ATMG00410.1.TAIR10	ATPase subunit 6-1
+ATMG00480.1.TAIR10	Plant mitochondrial ATPase, F0 complex, subunit 8 protein
+ATMG00490.1.TAIR10	Mitovirus RNA-dependent RNA polymerase
+ATMG00510.1.TAIR10	NADH dehydrogenase subunit 7
+ATMG00513.1.TAIR10	NADH dehydrogenase 5A
+ATMG00516.1.TAIR10	NADH dehydrogenase 1C
+ATMG00520.1.TAIR10	Intron maturase, type II family protein
+ATMG00560.1.TAIR10	Nucleic acid-binding, OB-fold-like protein
+ATMG00570.1.TAIR10	Sec-independent periplasmic protein translocase
+ATMG00580.1.TAIR10	NADH dehydrogenase subunit 4
+ATMG00590.1.TAIR10	Cytochrome b/b6 protein
+ATMG00610.1.TAIR10	Putative membrane lipoprotein
+ATMG00640.1.TAIR10	hydrogen ion transporting ATP synthases, rotational mechanism;zinc ion binding
+ATMG00650.1.TAIR10	NADH dehydrogenase subunit 4L
+ATMG00665.1.TAIR10	NADH dehydrogenase 5B
+ATMG00710.1.TAIR10	Polynucleotidyl transferase, ribonuclease H-like superfamily protein
+ATMG00730.1.TAIR10	cytochrome c oxidase subunit 3
+ATMG00750.1.TAIR10	GAG/POL/ENV polyprotein
+ATMG00810.1.TAIR10	DNA/RNA polymerases superfamily protein
+ATMG00820.1.TAIR10	Reverse transcriptase (RNA-dependent DNA polymerase)
+ATMG00830.1.TAIR10	cytochrome C biogenesis 382
+ATMG00850.1.TAIR10	DNA/RNA polymerases superfamily protein
+ATMG00860.1.TAIR10	DNA/RNA polymerases superfamily protein
+ATMG00900.1.TAIR10	cytochrome C biogenesis 256
+ATMG00940.1.TAIR10	DNA binding
+ATMG00960.1.TAIR10	Cytochrome C assembly protein
+ATMG00980.1.TAIR10	Ribosomal protein S12/S23 family protein
+ATMG00990.1.TAIR10	NADH dehydrogenase 3
+ATMG01010.1.TAIR10	Unknown conserved protein
+ATMG01080.1.TAIR10	mitochondrial F0-ATPase subunit 9
+ATMG01090.1.TAIR10	ATP synthase 9 mitochondrial
+ATMG01110.1.TAIR10	Mitovirus RNA-dependent RNA polymerase
+ATMG01120.1.TAIR10	NADH dehydrogenase 1B
+ATMG01170.1.TAIR10	ATPase, F0 complex, subunit A protein
+ATMG01190.1.TAIR10	ATP synthase subunit 1
+ATMG01250.1.TAIR10	RNA-directed DNA polymerase (reverse transcriptase)
+ATMG01270.1.TAIR10	mitochondrial ribosomal protein S7
+ATMG01275.1.TAIR10	NADH dehydrogenase 1A
+ATMG01280.1.TAIR10	Cytochrome C oxidase subunit II-like, transmembrane domain
+ATMG01320.1.TAIR10	NADH dehydrogenase 2B
+ATMG01360.1.TAIR10	cytochrome  oxidase
+ATMG01410.1.TAIR10	open reading frame 204

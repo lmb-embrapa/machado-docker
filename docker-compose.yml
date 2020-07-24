@@ -1,0 +1,52 @@
+version: '3.3'
+
+services:
+  db:
+    container_name: machado_postgres
+    image: postgres:11
+    user: ${UID?set UID in .env}
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data/machado
+    volumes:
+      - ./data/pgdata:/var/lib/postgresql/data/machado
+  elasticsearch:
+    container_name: machado_elasticsearch
+    build:
+      context: ./images/elasticsearch
+      dockerfile: ./elasticsearch.Dockerfile
+    user: ${UID?Is \$UID set?}
+    environment:
+      - ES_PKG_NAME=elasticsearch-5.6.16
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./data/ecdata:/elasticsearch/data
+  machado:
+    container_name: machado_container
+    build:
+      args: 
+        MACHADO_SOURCE: ${MACHADO_SOURCE}
+      context: ./images/machado
+      dockerfile: ./machado.Dockerfile
+    user: ${UID?Is \$UID set?}
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - MACHADO_PROJECT=${MACHADO_PROJECT}
+    volumes:
+      - .:/machado
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - elasticsearch
+
