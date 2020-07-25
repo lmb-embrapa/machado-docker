@@ -1,0 +1,3 @@
+This directory is used as mounting the mounting point to persist the PostgreSQL data.
+It must exist before initializing the PostgreSQL container in order to guarantee the correct user permissions.
+Otherwise, the container will create it automatically with root permissions. 
