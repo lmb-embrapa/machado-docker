@@ -1,5 +1,10 @@
 FROM openjdk:8
 
+ARG USER
+ARG UID
+
+RUN useradd -m ${USER} -u ${UID}
+
 ENV ES_PKG_NAME elasticsearch-5.6.16
 
 RUN \
@@ -11,6 +16,8 @@ RUN \
 
 RUN chmod -R 777 /elasticsearch
 WORKDIR /elasticsearch
+
+RUN sed -i 's/#network.host: 192.168.0.1/network.host: 0.0.0.0/g' /elasticsearch/config/elasticsearch.yml
 
 CMD ["/elasticsearch/bin/elasticsearch"]
 
