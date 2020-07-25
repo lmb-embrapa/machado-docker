@@ -19,7 +19,7 @@ It's required to create two mounting points for the PostgreSQL and ElasticSearch
     mkdir ./data/pgdata
     mkdir ./data/ecdata
 
-Now, edit the .env file to update your user information. In order to find you UID, just type `id` in a linux terminal. 
+Now, edit the `.env` file to update your user information. In order to find you UID, just type `id` in a linux terminal. 
 
 | **Variable**          | **Description**                                                         |
 |-----------------------|-------------------------------------------------------------------------|
@@ -33,7 +33,7 @@ Now, edit the .env file to update your user information. In order to find you UI
 
 To start the containers:
 
-    docker-compose up --build --rebuild
+    docker-compose up --build --force-recreate
 
 After creating the images and starting up the containers, the log will stop. At that point you can open the Machado instance in a browser using the URL (replace machadosample with the value of the variable MACHADO_PROJECT): 
 
