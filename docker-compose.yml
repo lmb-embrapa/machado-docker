@@ -15,6 +15,9 @@ services:
   elasticsearch:
     container_name: machado_elasticsearch
     build:
+      args: 
+        USER: ${USER}
+        UID: ${UID}
       context: ./images/elasticsearch
       dockerfile: ./elasticsearch.Dockerfile
     user: ${UID?Is \$UID set?}
@@ -34,18 +37,25 @@ services:
     build:
       args: 
         MACHADO_SOURCE: ${MACHADO_SOURCE}
+        USER: ${USER}
+        UID: ${UID}
       context: ./images/machado
       dockerfile: ./machado.Dockerfile
     user: ${UID?Is \$UID set?}
     environment:
+      - USER=${USER}
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - MACHADO_PROJECT=${MACHADO_PROJECT}
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     volumes:
       - .:/machado
     ports:
-      - "8000:8000"
+      - "8000:80"
     depends_on:
       - db
       - elasticsearch

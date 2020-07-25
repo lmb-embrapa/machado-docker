@@ -1,5 +1,10 @@
 FROM openjdk:8
 
+ARG USER
+ARG UID
+
+RUN useradd -m ${USER} -u ${UID}
+
 ENV ES_PKG_NAME elasticsearch-5.6.16
 
 RUN \
