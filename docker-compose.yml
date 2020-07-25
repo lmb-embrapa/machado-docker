@@ -49,4 +49,3 @@ services:
     depends_on:
       - db
       - elasticsearch
-

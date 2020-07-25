@@ -1,3 +1,0 @@
-This directory is used as mounting the mounting point to persist the ElasticSearch data.
-It must exist before initializing the ElasticSearch container in order to guarantee the correct user permissions.
-Otherwise, the container will create it automatically with root permissions. 
