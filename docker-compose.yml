@@ -3,7 +3,7 @@ version: '3.3'
 services:
   db:
     container_name: machado_postgres
-    image: postgres:11
+    image: postgres:12
     user: ${UID?set UID in .env}
     environment:
       - POSTGRES_DB=${POSTGRES_DB}
