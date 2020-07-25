@@ -12,6 +12,8 @@ RUN \
 RUN chmod -R 777 /elasticsearch
 WORKDIR /elasticsearch
 
+RUN sed -i 's/#network.host: 192.168.0.1/network.host: 0.0.0.0/g' /elasticsearch/config/elasticsearch.yml
+
 CMD ["/elasticsearch/bin/elasticsearch"]
 
 EXPOSE 9200
