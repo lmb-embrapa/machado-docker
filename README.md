@@ -4,8 +4,13 @@ This repository contains docker images to create you Machado instance.
 
 ## Requirements
 
-- Docker
-- Docker Compose
+- Docker 
+- Docker Compose (>=1.25.4)
+
+Make sure you can run docker with your current user:
+
+    docker run hello-world
+
 
 ## Quickstart
 
@@ -31,27 +36,6 @@ Now, edit the `.env` file to update your user information. In order to find you 
 | **MACHADO_SOURCE**    | the URL to the Machado GitHub repository or a fork of this repository   |
 | **MACHADO_PROJECT**   | the name of the Machado instance that you are creating                  |
 
-Now install the latest version of docker-compose, check latest version at:
-    
-    https://github.com/docker/compose/releases
-
-Substitute in the command bellow with a newer version if available (currently is 1.26.2):
-
-    sudo curl -L https://github.com/docker/compose/releases/download/1.26.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-
-Let's configure user permissions to use docker:
-
-    sudo groupadd docker
-    sudo usermod -aG docker ${USER}
-
-You will need to logout and login for the actions to take effect.
-To avoid this, type in the command below:
-
-    sudo su - ${USER}
-
-Go to the machado-docker installation directory and check if it is working with:
-
-    docker run hello-world
 
 To start the containers, type:
 
