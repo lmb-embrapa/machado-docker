@@ -31,22 +31,47 @@ Now, edit the `.env` file to update your user information. In order to find you 
 | **MACHADO_SOURCE**    | the URL to the Machado GitHub repository or a fork of this repository   |
 | **MACHADO_PROJECT**   | the name of the Machado instance that you are creating                  |
 
-To start the containers:
+Now install the latest version of docker-compose, check latest version at:
+    
+    https://github.com/docker/compose/releases
+
+Substitute in the command bellow with a newer version if available (currently is 1.26.2):
+
+    sudo curl -L https://github.com/docker/compose/releases/download/1.26.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+Let's configure user permissions to use docker:
+
+    sudo groupadd docker
+    sudo usermod -aG docker ${USER}
+
+You will need to logout and login for the actions to take effect.
+To avoid this, type in the command below:
+
+    sudo su - ${USER}
+
+Go to the machado-docker installation directory and check if it is working with:
+
+    docker run hello-world
+
+To start the containers, type:
 
     docker-compose up --build --force-recreate
 
-After creating the images and starting up the containers, the log will stop. At that point you can open the Machado instance in a browser using the URL (replace machadosample with the value of the variable MACHADO_PROJECT): 
+After creating the images and starting up the containers, the log will stop, but the prompt will not release.
+The terminal will be locked with this process.
 
-http://localhost:8000/machadosample/
+Now open the Machado instance in a browser using the URL (replace machadosample with the value of the variable MACHADO\_PROJECT): 
 
+    http://localhost:8000/machadosample/
 
-There are sample data files that can be quickly loaded. You can just open a new terminal, access the machado-docker directory and run:
+There are sample data files that can be quickly loaded. 
+You can just open a new terminal, access the machado-docker directory and run:
 
     bash load_machadosample.sh
 
 The results can be visualized in the browser, by accessing the URL above and using the search box. If you tried the search box before loading the data, it's necessary to restart the containers in order to clean the cache.
 
-Go back to the terminal that is displaying the logs and stop the containers:
+To stop machado-docker, go back to the terminal that is displaying the logs and stop the containers:
 
     CTRL+C
     docker-compose down
