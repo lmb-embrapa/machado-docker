@@ -138,3 +138,5 @@ HAYSTACK_CONNECTIONS = {
         'INDEX_NAME': 'haystack',
     },
 }
+
+MACHADO_JBROWSE_URL = 'http://localhost:8000/jbrowse'

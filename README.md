@@ -23,6 +23,7 @@ It's required to create two mounting points for the PostgreSQL and ElasticSearch
 
     mkdir ./data/pgdata
     mkdir ./data/ecdata
+    mkdir ./data/jbdata
 
 Now, edit the `.env` file to update your user information. In order to find you UID, just type `id` in a linux terminal. 
 
