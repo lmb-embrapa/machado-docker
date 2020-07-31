@@ -27,9 +27,6 @@ services:
       nofile:
         soft: 65536
         hard: 65536
-    ports:
-      - "9200:9200"
-      - "9300:9300"
     volumes:
       - ./data/ecdata:/elasticsearch/data
   machado:
@@ -54,6 +51,7 @@ services:
         hard: 65536
     volumes:
       - .:/machado
+      - ./data/jbdata:/var/www/html/jbrowse/data
     ports:
       - "8000:80"
     depends_on:
