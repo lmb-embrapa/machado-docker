@@ -65,3 +65,27 @@ To get them running again just type:
 
     docker-compose up
 
+## Deploy your own Machado instance
+
+In order to load your own datasets you'll need to git clone this repository to a brand new directory, configure the .env file with the information related to your project, load and index the datasets, and configure JBrowse. 
+
+### Loading data
+
+The data loading process should be executed in a particular order that is documented at https://machado.readthedocs.io/en/latest/dataload.html 
+
+The instructions you'll find use the manage.py component from Django. In order to invoke it using the Docker environment it's required to add `docker-compose exec machado` before each data loading command. For example:
+
+    docker-compose exec machado python manage.py load_relations_ontology --file data/sample/ontologies/ro.obo
+
+After loading the data, it's required to rebuild the ElasticSearch index using:
+
+    docker-compose exec machado python manage.py rebuild_index
+
+
+### JBrowse
+
+The JBrowse configuration file is available at `./data/jbdata`. If you have the machadosample instance running, you'll notice that inside jbdata there's a directory named after the organism, ***Arabidopsis thaliana*** in this case,  that contains a trackList.json file. 
+
+It's necessary to create such directories containing trackList.json files for each organism that's loaded to the database. A sample trackList.json.sample is available at `./images/machado/config/trackList.json.sample`.
+
+For example, if the mouse genomics data is loaded, there must be a `./data/pgdata/Mus musculus/trackList.json`. It's also required to open the trackList.json file and update the organism information properly.
