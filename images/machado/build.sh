@@ -12,6 +12,9 @@ update_settings () {
     fi
 }
 
+/opt/machado/bin/wait-for-it.sh db:5432
+/opt/machado/bin/wait-for-it.sh elasticsearch:9200
+
 if [ ! -d ${MACHADO_PROJECT} ]; then
     django-admin startproject ${MACHADO_PROJECT} .
     update_settings
