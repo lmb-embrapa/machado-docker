@@ -19,7 +19,7 @@ Just grab the code using GIT and enter the directory:
     git clone https://github.com/lmb-embrapa/machado-docker.git
     cd machado-docker
 
-It's required to create two mounting points for the PostgreSQL and ElasticSearch data. Otherwise, docker will create them with the root user and there will be permissions issues.
+It's **required** to create mounting points for the PostgreSQL, ElasticSearch, and JBrowse data. Otherwise, docker will create them with the root user and there will be permissions issues.
 
     mkdir ./data/pgdata
     mkdir ./data/ecdata
