@@ -137,3 +137,4 @@ HAYSTACK_CONNECTIONS = {
 }
 
 MACHADO_JBROWSE_URL = 'http://localhost:8000/jbrowse'
+MACHADO_VALID_TYPES = ['gene', 'mRNA', 'polypeptide']
