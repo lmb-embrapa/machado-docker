@@ -130,7 +130,7 @@ STATIC_ROOT = '/machado/machadosample/static'
 
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.elasticsearch5_backend.Elasticsearch5SearchEngine',
+        'ENGINE': 'haystack.backends.elasticsearch7_backend.Elasticsearch7SearchEngine',
         'URL': 'http://elasticsearch:9200/',
         'INDEX_NAME': 'haystack',
     },

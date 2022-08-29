@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 ARG MACHADO_SOURCE
 ARG USER
@@ -19,6 +19,9 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
+ENV TZ=America/Sao_Paulo
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get install -y apt-utils
 RUN apt-get install -y vim curl wget apache2 apache2-utils git sudo unzip python3 libapache2-mod-wsgi-py3 python3 libapache2-mod-wsgi-py3 python3-pip build-essential zlib1g-dev libpng-dev libgd-perl
@@ -29,7 +32,7 @@ RUN pip install --upgrade pip
 
 RUN pip install git+${MACHADO_SOURCE}
 RUN pip install git+https://github.com/django-haystack/django-haystack
-RUN pip install 'elasticsearch>=5,<6'
+RUN pip install 'elasticsearch>=7,<8'
 
 RUN mkdir /machado && \
         chmod 777 /machado
