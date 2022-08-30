@@ -24,7 +24,7 @@ ENV TZ=America/Sao_Paulo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get install -y apt-utils
-RUN apt-get install -y vim curl wget apache2 apache2-utils git sudo unzip python3 libapache2-mod-wsgi-py3 python3 libapache2-mod-wsgi-py3 python3-pip build-essential zlib1g-dev libpng-dev libgd-perl libbz2-dev
+RUN apt-get install -y vim curl wget apache2 apache2-utils git sudo unzip python3 libapache2-mod-wsgi-py3 python3 libapache2-mod-wsgi-py3 python3-pip build-essential zlib1g-dev libpng-dev libgd-perl libbz2-dev liblzma-dev
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 10
