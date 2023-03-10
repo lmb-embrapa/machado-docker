@@ -13,21 +13,16 @@ services:
       - ./data/pgdata:/var/lib/postgresql/data/machado
   elasticsearch:
     container_name: machado_elasticsearch
-    build:
-      args: 
-        USER: ${USER}
-        UID: ${UID}
-      context: ./images/elasticsearch
-      dockerfile: ./elasticsearch.Dockerfile
-    user: ${UID?Is \$UID set?}
+    image: elasticsearch:7.17.9
     environment:
-      - ES_PKG_NAME=elasticsearch-5.6.16
+      - discovery.type=single-node
+    mem_limit: 1Gb
     ulimits:
       nofile:
         soft: 65536
         hard: 65536
     volumes:
-      - ./data/ecdata:/elasticsearch/data
+      - ./data/ecdata:/usr/share/elasticsearch/data
   machado:
     container_name: machado_container
     build:
