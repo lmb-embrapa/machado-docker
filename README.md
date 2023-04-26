@@ -19,11 +19,12 @@ Just grab the code using GIT and enter the directory:
     git clone https://github.com/lmb-embrapa/machado-docker.git
     cd machado-docker
 
-It's **required** to create mounting points for the PostgreSQL, ElasticSearch, and JBrowse data. Otherwise, docker will create them with the root user and there will be permissions issues.
+It's **required** to create mounting points for the PostgreSQL, ElasticSearch, and JBrowse data. These directories should be granted global read/write permissions.
 
     mkdir ./data/pgdata
     mkdir ./data/ecdata
     mkdir ./data/jbdata
+    chmod 777 ./data/*data
 
 Now, edit the `.env` file to update your user information. In order to find you UID, just type `id` in a linux terminal. 
 
